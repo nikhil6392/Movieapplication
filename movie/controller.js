@@ -1,9 +1,6 @@
-const data = [
-    { id: 1, title: 'IRON MAN', year: '2000'},
-    { id: 2, title: 'Thor', year: '2011'},
-    { id: 3, title: 'Captain America', year: '2011'},
-]
+import { getAll } from "./model.js";
 
-export function listAction(req, res){
-    res.send(data);
+export async function listAction(req, res){
+    const data = await getAll();
+    res.send(data)
 }
