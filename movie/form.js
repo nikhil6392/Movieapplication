@@ -5,7 +5,7 @@ export function render(movie){
     <head>
         <meta charset="utf-8">
         <title>Movie List</title>
-        <link rel="stylesheet" href="./style.css" />
+        <link rel="stylesheet" href="/style.css" />
     </head>
     <body>
         <form action="/movie/save" method="post">

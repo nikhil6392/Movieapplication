@@ -9,7 +9,7 @@ export function render(movies){
     </head>
     <body>
         <table>
-            <thead><tr><th>Id</th><th>Title</th></tr></thead>
+            <thead><tr><th>Id</th><th>Title</th><td>Delete</td><td>Edit</td></tr></thead>
             <tbody>
                 ${movies
                     .map(movie => `<tr><td>${movie.id}</td><td>${movie.title}</td>
