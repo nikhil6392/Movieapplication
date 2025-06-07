@@ -4,7 +4,20 @@ let data = [
     { id: 3, title: 'Captain America', year: '2011'},
 ]
 
+function getNextId(){
+    return Math.max(...data.map((movie) => movie.id)) + 1;
+}
 
+function insert(movie){
+    movie.id = getNextId();
+    data.push(movie);
+}
+
+function update(movie){
+    movie.id = parseInt(movie.id, 10);
+    const index = data.findIndex((item) => item.id === movie.id)
+    data[index] = movie
+}
 export function getAll(){
     return Promise.resolve(data);
 }
@@ -16,4 +29,13 @@ export function remove(id){
 
 export function get(id){
     return Promise.resolve(data.find((movie) => movie.id === id));
+}
+
+export function save(movie){
+    if(movie.id === ''){
+        insert(movie);
+    } else {
+        update(movie)
+    }
+    return Promise.resolve();
 }

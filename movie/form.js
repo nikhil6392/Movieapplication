@@ -5,7 +5,7 @@ export function render(movie){
     <head>
         <meta charset="utf-8">
         <title>Movie List</title>
-        <link rel="stylesheet" href="./style.css />
+        <link rel="stylesheet" href="./style.css" />
     </head>
     <body>
         <form action="/movie/save" method="post">
@@ -15,7 +15,7 @@ export function render(movie){
                 <input type="text" id="title" name="title" value="${movie.title}" />
             </div>
             <div>
-                <label for="id">Year:</label>
+                <label for="year">Year:</label>
                 <input type="text" id="year" name="year" value="${movie.year}" />
             </div>
             <div>

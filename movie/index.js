@@ -1,11 +1,13 @@
 import { Router } from "express";
-import { formAction, listAction, removeAction } from "./controller.js";
+import { formAction, listAction, removeAction, saveAction } from "./controller.js";
 
 const router = Router();
 
 router.get('/', listAction)
 router.get('/delete/:id', removeAction)
-router.get('/movie/form/:id', formAction);
+router.get('/form/:id', formAction);
+router.get('/form', formAction)
+router.post('/save', saveAction)
 
 export {router}
 
