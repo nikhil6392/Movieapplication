@@ -13,3 +13,7 @@ export function remove(id){
     data = data.filter(movie => movie.id !== id);
     return Promise.resolve();
 }
+
+export function get(id){
+    return Promise.resolve(data.find((movie) => movie.id === id));
+}

@@ -13,11 +13,13 @@ export function render(movies){
             <tbody>
                 ${movies
                     .map(movie => `<tr><td>${movie.id}</td><td>${movie.title}</td>
-                    <td><a href ="/movie/delete/${movie.id}">delete</a></td>  
+                    <td><a href ="/movie/delete/${movie.id}">delete</a></td>
+                    <td><a href="/movie/form/${movie.id}">edit</a></td>  
                     </tr>`).join('')
                 }
             </tbody>
         </table>
+        <a href="/movie/form">new</a>
     </body>
     </html>`;
 }
