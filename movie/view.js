@@ -12,7 +12,9 @@ export function render(movies){
             <thead><tr><th>Id</th><th>Title</th></tr></thead>
             <tbody>
                 ${movies
-                    .map(movie => `<tr><td>${movie.id}</td><td>${movie.title}</td></tr>`).join('')
+                    .map(movie => `<tr><td>${movie.id}</td><td>${movie.title}</td>
+                    <td><a href ="/movie/delete/${movie.id}">delete</a></td>  
+                    </tr>`).join('')
                 }
             </tbody>
         </table>
